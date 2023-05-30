@@ -30,9 +30,7 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0)
   const clickPrev = () => {
-    setPokemonIndex(
-      pokemonIndex === 0 ? pokemonList.length - 1 : pokemonIndex - 1
-    )
+    setPokemonIndex(pokemonIndex - 1)
   }
   const clickNext = () => {
     setPokemonIndex(pokemonIndex + 1)
