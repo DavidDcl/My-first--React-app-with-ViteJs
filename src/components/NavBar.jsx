@@ -1,8 +1,11 @@
-const NavBar = ({ clickNext, clickPrev, disablePrev, disableNext }) => {
+const NavBar = ({ pokemonlist, setPokemonIndex }) => {
   return (
     <>
-      {disablePrev && <button onClick={clickPrev}>Previus</button>}
-      {disableNext && <button onClick={clickNext}>Next</button>}
+      {pokemonlist.map((pokemon, index) => (
+        <button key={pokemon.name} onClick={() => setPokemonIndex(index)}>
+          {pokemon.name}
+        </button>
+      ))}
     </>
   )
 }
