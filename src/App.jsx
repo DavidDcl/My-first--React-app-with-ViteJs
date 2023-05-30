@@ -1,5 +1,6 @@
 import "./App.css"
 import PokemonCard from "./components/Card"
+import NavBar from "./components/NavBar"
 import { useState } from "react"
 // eslint-disable-next-line no-unused-vars
 const pokemonList = [
@@ -35,15 +36,17 @@ function App() {
   const clickNext = () => {
     setPokemonIndex(pokemonIndex + 1)
   }
-
   const currentPokemon = pokemonList[pokemonIndex]
-  const disablePrev = pokemonIndex !== 0
-  const disableNext = pokemonIndex !== pokemonList.length - 1
+
   return (
     <>
       <PokemonCard pokemon={currentPokemon} />
-      {disablePrev && <button onClick={clickPrev}>Previus</button>}
-      {disableNext && <button onClick={clickNext}>Next</button>}
+      <NavBar
+        clickPrev={clickPrev}
+        clickNext={clickNext}
+        disablePrev={pokemonIndex !== 0}
+        disableNext={pokemonIndex !== pokemonList.length - 1}
+      />
     </>
   )
 }
