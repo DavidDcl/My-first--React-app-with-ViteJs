@@ -1,9 +1,9 @@
 const NavBar = ({ pokemonlist, setPokemonIndex }) => {
   const handleClick = (pokemon) => {
-    if (pokemon.name === "pikachu") {
+    if (pokemon.name === 'pikachu') {
       setTimeout(() => {
-        alert("pika pikachu !!!")
-      }, 0)
+        alert('pika pikachu !!!')
+      }, 1)
     }
   }
   return (
