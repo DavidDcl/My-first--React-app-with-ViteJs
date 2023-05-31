@@ -2,6 +2,7 @@ import "./App.css"
 import PokemonCard from "./components/Card"
 import NavBar from "./components/NavBar"
 import { useState } from "react"
+import { useEffect } from "react"
 // eslint-disable-next-line no-unused-vars
 const pokemonList = [
   {
@@ -31,10 +32,18 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0)
   const currentPokemon = pokemonList[pokemonIndex]
+
+  useEffect(() => {
+    alert("Hello pokemon trainer!")
+  }, [])
   return (
     <>
       <PokemonCard pokemon={currentPokemon} />
-      <NavBar pokemonlist={pokemonList} setPokemonIndex={setPokemonIndex} />
+      <NavBar
+        pokemonlist={pokemonList}
+        setPokemonIndex={setPokemonIndex}
+        currentPokemon={currentPokemon}
+      />
     </>
   )
 }
