@@ -3,7 +3,7 @@ const NavBar = ({ pokemonlist, setPokemonIndex }) => {
     if (pokemon.name === 'pikachu') {
       setTimeout(() => {
         alert('pika pikachu !!!')
-      }, 1)
+      }, 20)
     }
   }
   return (

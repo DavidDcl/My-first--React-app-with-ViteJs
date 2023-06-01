@@ -1,32 +1,32 @@
-import "./App.css"
-import PokemonCard from "./components/Card"
-import NavBar from "./components/NavBar"
-import { useState } from "react"
-import { useEffect } from "react"
+import './App.css'
+import PokemonCard from './components/Card'
+import NavBar from './components/NavBar'
+import { useState } from 'react'
+import { useEffect } from 'react'
 // eslint-disable-next-line no-unused-vars
 const pokemonList = [
   {
-    name: "bulbasaur",
+    name: 'bulbasaur',
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
   },
   {
-    name: "charmander",
+    name: 'charmander',
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png',
   },
   {
-    name: "squirtle",
+    name: 'squirtle',
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png',
   },
   {
-    name: "pikachu",
+    name: 'pikachu',
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
   },
   {
-    name: "mew",
+    name: 'mew',
   },
 ]
 function App() {
@@ -34,8 +34,8 @@ function App() {
   const currentPokemon = pokemonList[pokemonIndex]
 
   useEffect(() => {
-    alert("Hello pokemon trainer!")
-  }, [])
+    alert('Hello pokemon trainer!')
+  }, [0])
   return (
     <>
       <PokemonCard pokemon={currentPokemon} />
